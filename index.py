@@ -3,6 +3,7 @@ from bottle import route, run, Response, template
 import json
 import image
 
+app = bottle()
 def call_service():
     directoryName = 'photos'
     image.process(directoryName)
@@ -17,4 +18,4 @@ def index():
 if __name__ == '__main__':
 	run(host='0.0.0.0', port=8000, debug=False, reloader=True)
 	
-serverApp = bottle.default_app()
+# serverApp = bottle.default_app()
